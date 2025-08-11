@@ -22,9 +22,9 @@
     "notion",
     "table"
   ],
-  "author": "Nicolas Keller (https://github.com/nick-keller)",
+  "author": "Angeart (https://github.com/Angeart)",
   "license": "MIT",
-  "repository": "nick-keller/react-datasheet-grid",
+  "repository": "Angeart/react-datasheet-grid",
   "homepage": "https://react-datasheet-grid.netlify.app/",
   "devDependencies": {
     "@jest/types": "^27.4.2",
