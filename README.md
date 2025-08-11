@@ -1,5 +1,8 @@
 # react-datasheet-grid
 
+**This package is a fork of the original react-datasheet-grid and has been
+modified to use overlayscrollbars-react for scrollbar implementation.**
+
 ![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/nick-keller/react-datasheet-grid/tests.yml?branch=master)
 [![Coveralls](https://img.shields.io/coveralls/github/nick-keller/react-datasheet-grid)](https://coveralls.io/github/nick-keller/react-datasheet-grid)
 [![npm](https://img.shields.io/npm/dm/react-datasheet-grid)](https://www.npmjs.com/package/react-datasheet-grid)
@@ -14,6 +17,7 @@ An Airtable-like / Excel-like component to create beautiful spreadsheets.
 ![Preview](./images/preview.png)
 
 Feature rich:
+
 - Dead simple to set up and to use
 - Supports copy / pasting to and from Excel, Google-sheet...
 - Keyboard navigation and shortcuts fully-supported
@@ -36,35 +40,35 @@ npm i react-datasheet-grid
 
 ```tsx
 import {
-  DataSheetGrid,
   checkboxColumn,
-  textColumn,
+  DataSheetGrid,
   keyColumn,
-} from 'react-datasheet-grid'
+  textColumn,
+} from "react-datasheet-grid";
 
 // Import the style only once in your app!
-import 'react-datasheet-grid/dist/style.css'
+import "react-datasheet-grid/dist/style.css";
 
 const Example = () => {
-  const [ data, setData ] = useState([
-    { active: true, firstName: 'Elon', lastName: 'Musk' },
-    { active: false, firstName: 'Jeff', lastName: 'Bezos' },
-  ])
+  const [data, setData] = useState([
+    { active: true, firstName: "Elon", lastName: "Musk" },
+    { active: false, firstName: "Jeff", lastName: "Bezos" },
+  ]);
 
   const columns = [
     {
-      ...keyColumn('active', checkboxColumn),
-      title: 'Active',
+      ...keyColumn("active", checkboxColumn),
+      title: "Active",
     },
     {
-      ...keyColumn('firstName', textColumn),
-      title: 'First name',
+      ...keyColumn("firstName", textColumn),
+      title: "First name",
     },
     {
-      ...keyColumn('lastName', textColumn),
-      title: 'Last name',
+      ...keyColumn("lastName", textColumn),
+      title: "Last name",
     },
-  ]
+  ];
 
   return (
     <DataSheetGrid
@@ -72,6 +76,6 @@ const Example = () => {
       onChange={setData}
       columns={columns}
     />
-  )
-}
+  );
+};
 ```
